@@ -75,3 +75,12 @@ class MemoryCache {
 
 // Export singleton instance
 export const cache = new MemoryCache();
+
+// Export utility functions
+export function getCacheStats() {
+  return cache.getStats();
+}
+
+export function clearCache() {
+  cache.clear();
+}
