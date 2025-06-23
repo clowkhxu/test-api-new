@@ -1,7 +1,7 @@
 import { cache } from './cache';
 
-// Google Apps Script URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzX-dmnDRM19r8DsptquCTLsA3jz7dJVb0QzPqFiB02ZK6SKpZdzjUMpj0JJ4iBuFoZbQ/exec';
+// Google Apps Script URL from environment variable or fallback to hardcoded
+const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycbzX-dmnDRM19r8DsptquCTLsA3jz7dJVb0QzPqFiB02ZK6SKpZdzjUMpj0JJ4iBuFoZbQ/exec';
 
 export interface ProxyOptions {
   cacheTTL?: number; // Cache time in seconds
